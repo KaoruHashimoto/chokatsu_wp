@@ -1,0 +1,29 @@
+version: '3'
+services:
+  web:
+    build: ./docker/web
+    environment:
+      - TZ=Asia/Tokyo
+      - WP_ENV=development
+    ports:
+      - "80:80"
+    links:
+      - db
+    depends_on:
+      - db
+    volumes:
+      - ./docker/web/vhost.conf:/etc/httpd/conf.d/chokatsu.jp.conf
+      - .:/var/www/chokatsu.jp
+
+  db:
+    build: ./docker/db
+    ports:
+      - "3306:3306"
+    hostname: db
+    env_file: ./docker/db/.environment
+    volumes:
+      - mysql:/var/lib/mysql
+
+volumes:
+  mysql:
+    driver: local
