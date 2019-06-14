@@ -116,13 +116,10 @@ body {
 }
 
 a {
-	color: #24890d;
+	color: #fff;
 	text-decoration: none;
 }
 
-a:focus {
-	outline: thin dotted;
-}
 
 a:hover,
 a:active {
@@ -131,7 +128,7 @@ a:active {
 
 a:active,
 a:hover {
-	color: #41a62a;
+	color: #fff;
 }
 
 h1,
@@ -417,19 +414,6 @@ textarea {
 	vertical-align: top;
 }
 
-table,
-th,
-td {
-	border: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-table {
-	border-collapse: separate;
-	border-spacing: 0;
-	border-width: 1px 0 0 1px;
-	margin-bottom: 24px;
-	width: 100%;
-}
 
 caption,
 th,
@@ -500,44 +484,6 @@ textarea:focus {
 }
 
 /* Buttons */
-
-button,
-.button,
-input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-	background-color: #24890d;
-	border: 0;
-	border-radius: 2px;
-	color: #fff;
-	font-size: 12px;
-	font-weight: 700;
-	padding: 10px 30px 11px;
-	text-transform: uppercase;
-	vertical-align: bottom;
-}
-
-button:hover,
-button:focus,
-.button:hover,
-.button:focus,
-input[type="button"]:hover,
-input[type="button"]:focus,
-input[type="reset"]:hover,
-input[type="reset"]:focus,
-input[type="submit"]:hover,
-input[type="submit"]:focus {
-	background-color: #41a62a;
-	color: #fff;
-}
-
-button:active,
-.button:active,
-input[type="button"]:active,
-input[type="reset"]:active,
-input[type="submit"]:active {
-	background-color: #55d737;
-}
 
 .search-field {
 	width: 100%;
@@ -818,8 +764,6 @@ span + .edit-link:before,
  */
 
 .site {
-	background-color: #fff;
-	max-width: 1260px;
 	position: relative;
 }
 
@@ -846,7 +790,6 @@ span + .edit-link:before,
 
 .site-header {
 	background-color: #000;
-	max-width: 1260px;
 	position: relative;
 	width: 100%;
 	z-index: 4;
@@ -1037,10 +980,6 @@ span + .edit-link:before,
  * 6.0 Content
  * -----------------------------------------------------------------------------
  */
-
-.content-area {
-	padding-top: 48px;
-}
 
 .hentry {
 	margin: 0 auto 48px;
@@ -3018,7 +2957,7 @@ a.post-thumbnail:hover {
 		padding: 0;
 	}
 
-	.list-view .content-area {
+	.list-view {
 		padding: 0 10px;
 	}
 
@@ -3626,19 +3565,6 @@ a.post-thumbnail:hover {
 		width: 29.04761904%;
 	}
 
-	.site:before {
-		background-color: #000;
-		content: "";
-		display: block;
-		height: 100%;
-		min-height: 100%;
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 182px;
-		z-index: 2;
-	}
-
 	#secondary {
 		background-color: transparent;
 		border: 0;
@@ -4139,7 +4065,7 @@ a.post-thumbnail:hover {
 	.site-header,
 	.post-thumbnail,
 	a.post-thumbnail:hover,
-	.site-content .entry-header,
+    .entry-header,
 	.site-footer,
 	.featured-content,
 	.featured-content .entry-header {
@@ -4155,11 +4081,7 @@ a.post-thumbnail:hover {
 		font-size: 19pt;
 	}
 
-	.content-area {
-		padding-top: 0;
-	}
-
-	.list-view .site-content .hentry {
+	.list-view .hentry {
 		border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 		margin-bottom: 48px;
 		padding-bottom: 24px;
@@ -4169,11 +4091,11 @@ a.post-thumbnail:hover {
 		margin: 0 10px 24px;
 	}
 
-	.site-content .has-post-thumbnail .entry-header {
+    .has-post-thumbnail .entry-header {
 		padding-top: 0;
 	}
 
-	.site-content footer.entry-meta {
+    footer.entry-meta {
 		margin: 24px auto;
 	}
 

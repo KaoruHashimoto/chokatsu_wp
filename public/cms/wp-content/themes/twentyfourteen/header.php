@@ -28,6 +28,8 @@
 	<script src="<?php echo get_template_directory_uri(); ?>/js/html5.js"></script>
 	<![endif]-->
 	<?php wp_head(); ?>
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/css.css">
+
 </head>
 
 <body <?php body_class(); ?>>
@@ -42,24 +44,40 @@
 
 	<header id="masthead" class="site-header" role="banner">
 		<div class="header-main">
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-
-			<div class="search-toggle">
-				<a href="#search-container" class="screen-reader-text"><?php _e( 'Search', 'twentyfourteen' ); ?></a>
-			</div>
-
-			<nav id="primary-navigation" class="site-navigation primary-navigation" role="navigation">
-				<button class="menu-toggle"><?php _e( 'Primary Menu', 'twentyfourteen' ); ?></button>
-				<a class="screen-reader-text skip-link" href="#content"><?php _e( 'Skip to content', 'twentyfourteen' ); ?></a>
-				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
-			</nav>
-		</div>
-
-		<div id="search-container" class="search-box-wrapper hide">
-			<div class="search-box">
-				<?php get_search_form(); ?>
-			</div>
+			<h1 class="site-title">
+                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/logo.png">
+                </a>   
+            </h1>
+            <button class="menu-btn" id="mobile-menu"></button>  
 		</div>
 	</header><!-- #masthead -->
-
+        <!--===========nav=============-->
+    <nav>
+        <div class="container nav-container">
+            <ul class="navbar">
+                <li>
+                    <a href="<?php echo home_url(); ?>">ホーム</a>
+                </li>
+                <li>
+                    <a href="<?php echo home_url(); ?>/intestine/">そもそも腸って？</a>
+                </li>
+                <li>
+                    <a href="<?php echo home_url(); ?>/bacteria/">知ろう！腸内細菌</a>
+                </li>
+                <li>
+                    <a href="<?php echo home_url(); ?>/food/">食事で腸活</a>
+                </li>
+                <li>
+                    <a href="<?php echo home_url(); ?>/exercise/">運動で腸活</a>
+                </li>
+                <li>
+                    <a href="<?php echo home_url(); ?>/qanda/">Q&amp;A</a>
+                </li>
+            </ul>         
+        </div><!--/nav-container-->
+    </nav>
+    <!--===========/nav============-->
+    <script src="<?php echo get_template_directory_uri(); ?>/js/script.js"></script>
+    
 	<div id="main" class="site-main">

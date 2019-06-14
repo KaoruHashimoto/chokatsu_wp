@@ -9,17 +9,23 @@
  * @since Twenty Fourteen 1.0
  */
 ?>
-
+<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/css.css">
 		</div><!-- #main -->
 
 		<footer id="colophon" class="site-footer" role="contentinfo">
 
 			<?php get_sidebar( 'footer' ); ?>
-
-			<div class="site-info">
-				<?php do_action( 'twentyfourteen_credits' ); ?>
-				<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'twentyfourteen' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'twentyfourteen' ), 'WordPress' ); ?></a>
-			</div><!-- .site-info -->
+            
+             <div class="container footer-container">
+                <ul class="footer-nav">
+                    <li><a href="intestine/index.html">そもそも腸って？</a></li>
+                    <li><a href="bacteria/index.html">知ろう！腸内細菌</a></li>
+                    <li><a href="food/index.html">食事で腸活</a></li>
+                    <li><a href="exercise/index.html">運動で腸活</a></li>
+                    <li><a href="qanda/index.html">Q&amp;A</a></li>
+                </ul>
+            <p class="copyright">&copy;腸活、はじめませんか？</p>    
+            </div><!--/footer-container-->
 		</footer><!-- #colophon -->
 	</div><!-- #page -->
 
